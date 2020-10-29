@@ -1,10 +1,10 @@
 <template>
     <div>
-        <label for="">Name</label>
+        <label for="" class="mr-5">Name</label>
         <input 
             type="text" 
             :value="value"
-            style="padding: 30px; border: 2px solid green;"
+            style=""
             @input="$emit('input', $event.target.value)"
         >
     </div> 

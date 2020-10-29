@@ -2,7 +2,7 @@
     <div>
         <h1>{{ title }}</h1>
         <p>{{ name }}</p><br>
-        <button @click="updateName">Change Name</button>
+        <button @click="updateName" class="mb-5">Change Name</button>
     </div>
 </template>
 
@@ -33,6 +33,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
