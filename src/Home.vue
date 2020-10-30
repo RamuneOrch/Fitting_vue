@@ -17,6 +17,7 @@
                     first="지난 체험단"
                     second="진행중"
                     third="오픈 예정"
+                    :step= "step"
                 />
             </div>
           <div >
@@ -31,12 +32,20 @@
 
         <!-- center -->
 
-        <div class="container " style=" ;height: 100%; padding-top : 50px; padding-bottom : 60px">
+        <div class="container bg-primary" style=" ;height: 100%; padding-top : 50px; padding-bottom : 60px">
           <ABody
             :step = "step"
           />
         </div>
-
+        
+        <div class="container text-center"
+             style="background-color : #E0E0E0;
+             height : 200px;
+             padding-top : 90px
+             "
+        >
+          피팅
+        </div>
         <!-- center -->
 
 
@@ -103,6 +112,7 @@ export default {
     changePage(n){
       if(this.step !== n){
         this.step = n
+        console.log("changed!" + n);
       }
     }
   },

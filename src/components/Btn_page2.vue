@@ -1,6 +1,6 @@
 <template>
   <div class="pb-2">
-        <div v-if="fuuu === 1">
+        <div v-if="step === 2">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary">
                     <input type="radio" name="options" id="option1" autocomplete="off"> {{ first }}
@@ -37,7 +37,8 @@ export default {
         first: String,
         second: String,
         third: String,
-        fuuu : Number
+        fuuu : Number,
+        step : Number
     }
 
 }
