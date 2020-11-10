@@ -1,6 +1,5 @@
 <template>
-    <div class="">
-        <div class="">
+    <div class="col">
             <div class="border-bottom"
                 v-for="(person, index) in sample1"
                 :key="index"
@@ -8,7 +7,6 @@
                 <div class="d-flex justify-content align-items-center
                     "
                     style="
-                        width : 100%;
                         background-color : white;
                     "
                 
@@ -16,23 +14,25 @@
                     <img :src="person.image" alt="" height="100px">
                     <div 
                         class="
-                            p-2 d-flex flex-column bg-light
+                            p-3 d-flex flex-column bg-light
                             filtered_box    
                         "
                         style="border-radius : 10px;
                                text-overflow: ellipsis;
+                            width:100%;
                         "
                     >
                         <strong>{{ person.brand }}</strong>
-                        <a href="/buy">
+                        <a href="/buy" style="
+                            white-space:normal;">
                             {{ person.sample_title }}
                         </a>
                         <p class="card-text mb-auto"
                             style="
-                            width : 500px;
                             overflow:hidden;
-                            white-space:nowrap;
-                            text-overflow: ellipsis;"
+                            white-space:normal;
+                            text-overflow: ellipsis;
+                            font-size: 14px"
                         >
                             사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
                         </p>
@@ -42,8 +42,6 @@
                     </div>
                 </div>
             </div>
-            
-        </div>
     </div>
 </template>
 

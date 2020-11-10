@@ -4,7 +4,7 @@
             <div
             v-for="(person, index) in sample2"
             :key="index"
-            class="border-bottom"
+            class="border-bottom col p-0"
             >
                 <div
                     class="d-flex justify-content align-items-center bg-light "
@@ -12,7 +12,7 @@
                     <img :src="person.image" alt="" height="120px" class="ml-3">
                     <div 
                                 class="
-                                    p-2 d-flex flex-column bg-light
+                                    p-4 d-flex flex-column bg-light
                                     filtered_box ml-2  
                                 "
                                 style="border-radius : 10px;
@@ -25,9 +25,8 @@
                                 </a>
                                 <p class="card-text mb-auto"
                                     style="
-                                    width : 500px;
                                     overflow:hidden;
-                                    white-space:nowrap;
+                                    white-space:normal;
                                     text-overflow: ellipsis;"
                                 >
                                     사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
@@ -53,7 +52,7 @@
                     <img :src="person.image" alt="" height="120px" class="ml-3">
                     <div 
                                 class="
-                                    p-2 d-flex flex-column bg-light
+                                    p-4 d-flex flex-column bg-light
                                     filtered_box ml-2  
                                 "
                                 style="border-radius : 10px;
@@ -66,9 +65,8 @@
                                 </a>
                                 <p class="card-text mb-auto"
                                     style="
-                                    width : 500px;
                                     overflow:hidden;
-                                    white-space:nowrap;
+                                    white-space:normal;
                                     text-overflow: ellipsis;"
                                 >
                                     사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
@@ -94,7 +92,7 @@
                     <img :src="person.image" alt="" height="120px" class="ml-3">
                     <div 
                                 class="
-                                    p-2 d-flex flex-column bg-light
+                                    p-4 d-flex flex-column bg-light
                                     filtered_box ml-2  
                                 "
                                 style="border-radius : 10px;
@@ -107,9 +105,8 @@
                                 </a>
                                 <p class="card-text mb-auto"
                                     style="
-                                    width : 500px;
                                     overflow:hidden;
-                                    white-space:nowrap;
+                                    white-space:normal;
                                     text-overflow: ellipsis;"
                                 >
                                     사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩

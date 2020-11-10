@@ -17,11 +17,14 @@
             체험단
           </strong>
           </a>
-          <ABody
+          
+      </div>
+
+        <ABody
             :step = "step"
              class="text-dark"
              style="padding : 10px;"
-          />
+        />
           <div class="pl-2 pr-2 pb-2" style="background-color : #f2f2f2">
               <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
                   <label class="btn btn-light border"
@@ -36,7 +39,6 @@
                   </label>
               </div>
           </div>
-      </div>
 
       <div class="p-3" style="" v-if="num === 1">
         <div v-for="(people, index) in sample" :key="index">
@@ -92,9 +94,6 @@ export default {
   components: {
     ABody
   },
-  props:{
-    num : Number
-  },
   methods: {
     clickChange(n){
       this.num = n
@@ -102,6 +101,7 @@ export default {
   },
   data(){
     return{
+      num : 1,
       step:4,
       sample:[
         {

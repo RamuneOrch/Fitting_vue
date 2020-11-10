@@ -4,7 +4,7 @@
             class="btn btn-light btn-outline-dark rounded-pill mr-2 mb-3 btn-sm" 
             v-for="(people, index) in powder"
             :key="index"
-            @click="clickChange(index,person)"
+            @click="clickChange(index)"
             :class="{active:index === activeItem}"
         >
             {{ people.name }}

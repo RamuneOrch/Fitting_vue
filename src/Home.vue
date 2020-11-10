@@ -35,7 +35,8 @@
 
         <!-- center -->
 
-        <div class="center d-flex"
+        <div class="container-fluid"
+             style="margin-top : 10px; margin-bottom : 60px;"
         >
           <ABody
             :step = "step"

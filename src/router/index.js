@@ -11,7 +11,6 @@ const routes = [
     name: 'buy',
     component : Buy,
     props: {
-      num : 1
     }
   },
   {

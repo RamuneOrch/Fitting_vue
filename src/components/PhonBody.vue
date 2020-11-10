@@ -1,5 +1,5 @@
 <template>
-  <div class="m-auto"
+  <div class="row justify-content-center"
        style="background-color : #f2f2f2"
   >
     <div class="">
@@ -42,7 +42,6 @@
                 <Btn
                     first="상세정보"
                     second="리뷰"
-                    :fuuu = "fuuu"
                 />
             </div>
         </div>
