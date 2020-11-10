@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production' ? '/Fitting_vue' : '/',
+    publicPath: process.env.NODE_ENV = '/',
     outputDir: 'docs'
 }
