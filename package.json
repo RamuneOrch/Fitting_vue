@@ -18,6 +18,7 @@
     "cors": "^2.8.5",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
+    "hooper": "^0.3.4",
     "swiper": "5.x",
     "vue": "^2.6.10",
     "vue-agile": "^1.1.3",

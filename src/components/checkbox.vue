@@ -1,8 +1,11 @@
 <template>
     <div>
-        <button class="btn btn-light rounded-pill mr-2 mb-3 btn-sm"
-                v-for="(people, index) in powder"
-                :key="index"
+        <button 
+            class="btn btn-light btn-outline-dark rounded-pill mr-2 mb-3 btn-sm" 
+            v-for="(people, index) in powder"
+            :key="index"
+            @click="clickChange(index,person)"
+            :class="{active:index === activeItem}"
         >
             {{ people.name }}
         </button>
@@ -17,6 +20,7 @@ export default {
     },
     data() {
         return{
+            activeItem: [],
             powder: [
                 {name : '로션', id : 1},
                 {name : '바디케어', id : 2},
@@ -30,6 +34,15 @@ export default {
                 {name : '헤어케어', id : 10}
             ]
         }
+    },
+    methods:{
+        clickChange(index){
+            if(this.activeItem === index) this.activeItem = false
+            else this.activeItem = index;
+        }
+    },
+    computed: {
+
     }
 }
 </script>

@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-      <div class="container-fluid no-gutters p-0">
+      <div class="container-fluid no-gutters p-0"
+           style="
+          background-color : #f2f2f2;"
+      >
 
         <!-- header -->
 
-        <div class="text-center sticky-top text-white"
-            style="background-color : #5a3c82;
+        <div class="text-center sticky-top text-white border-bottom"
+            style="background-color : white;
             "
         >
             <div class="text-center">
                 <a href="#">
-                <img src="./images/logo2.png" alt="1" style="width:75px">
+                <img src="./images/1.png" alt="1" style="width:75px; padding : 5px;
+                margin-top : 5px;
+                margin-bottom : 5px;
+                ">
                 </a>
                 <CheckBox v-if="step === 1 || step === 3" />
                 <Btn v-if="step === 2" 
@@ -18,12 +24,9 @@
                     second="진행중"
                     third="오픈 예정"
                     :step= "step"
+                    @updatePage="Page"
                 />
             </div>
-          <div >
-              <!-- {{ Comjjang.all_sample_product.image }} -->
-              <!-- <h1>Hello</h1> -->
-          </div>
         </div>
 
         <!-- header -->
@@ -32,19 +35,12 @@
 
         <!-- center -->
 
-        <div class="container bg-primary" style=" ;height: 100%; padding-top : 50px; padding-bottom : 60px">
+        <div class="center d-flex"
+        >
           <ABody
             :step = "step"
+            :page = "this.page"
           />
-        </div>
-        
-        <div class="container text-center"
-             style="background-color : #E0E0E0;
-             height : 200px;
-             padding-top : 90px
-             "
-        >
-          피팅
         </div>
         <!-- center -->
 
@@ -52,30 +48,31 @@
 
         <!-- footer -->
 
-        <div class="fixed-bottom"
-            style="background-color : #5a3c82"
+        <div class="fixed-bottom border-top"
+            style="background-color : white
+                   border-top : 1px solid gray;
+              "
         >
           <div class="container"
-              style="height : 50px"
           >
             <div class="row align-items-center">
-              <div class="col bg-success mr-3 text-center footer_btn">
+              <div class="col mr-3 text-center footer_btn">
                 <button 
-                  class="btn btn-primary"
+                  class="btn"
                 @click="changePage(1)">
                   샘플 체험
                 </button>
               </div>
-              <div class="col bg-success mr-3 text-center footer_btn">
+              <div class="col mr-3 text-center footer_btn">
                 <button 
-                  class="btn btn-primary"
+                  class="btn"
                 @click="changePage(2)">
                   본품 체험
                 </button>
               </div>
-              <div class="col bg-success text-center footer_btn">
+              <div class="col text-center footer_btn">
                 <button 
-                  class="btn btn-primary"
+                  class="btn"
                 @click="changePage(3)">
                   구매
                 </button>
@@ -94,7 +91,6 @@
 import ABody from "./components/PhonBody"
 import CheckBox from "./components/checkbox"
 import Btn from "./components/Btn_page2"
-import gql from "graphql-tag"
 
 export default {
   name : "Home",
@@ -106,29 +102,22 @@ export default {
   data(){
     return{
       step : 1,
+      page : this.page,
     }
   },
   methods:{
     changePage(n){
       if(this.step !== n){
         this.step = n
-        console.log("changed!" + n);
+        this.page = 2
       }
+    },
+    Page(page){
+      this.page = page;
     }
   },
-  apollo: {
-      all_sample_product: gql`{
-          query{
-              image
-              amount
-          }
-      }`
-  }
 }
 </script>
 
-<style>
- .footer_btn{
-   height: 50px;
- }
+<style src="./style/main.css">
 </style>
