@@ -56,7 +56,7 @@ export default {
   },
   methods: {
       test(){
-          console.log(this.btId);
+        //   console.log(this.btId);
       }
   },
   data() {
