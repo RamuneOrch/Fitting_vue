@@ -1,11 +1,12 @@
 <template>
     <div class="col">
-            <div class="border-bottom"
+            <div class=""
                 v-for="(person, index) in sample1"
                 :key="index"
             >
-                <div class="d-flex justify-content align-items-center
+                <div class="d-flex justify-content align-items-center p-3 pr-4 pl-4 border-bottom
                     "
+                    v-if="person.id === btId || btId === 999"
                     style="
                         background-color : white;
                     "
@@ -39,6 +40,7 @@
                         <div class="align-text-bottom text-muted">
                             g | {{ person.amount }}개| P
                         </div>
+                        <!-- <button @click="test">테스트</button> -->
                     </div>
                 </div>
             </div>
@@ -46,54 +48,26 @@
 </template>
 
 <script>
+import powder from '../powder'
+import sample1 from '../sample1'
 
 export default {
   components: {
   },
   methods: {
-
+      test(){
+          console.log(this.btId);
+      }
   },
   data() {
       return {
-          sample1: [
-              { 
-                  image :'https://bangpanimage.s3.ap-northeast-2.amazonaws.com/product_image/new/nss0781.png',
-                  amount : 44,
-                  sample_title: "유채 바이오셀룰로오스 모이스쳐 마스크",
-                  brand : "닥터펠로"
-              },
-              {
-                  image :'https://bangpanimage.s3.ap-northeast-2.amazonaws.com/product_image/ss0781.png',
-                  amount : 10,
-                  sample_title: "시트러스 바이오셀룰로오스 마스크",
-                  brand : "닥터펠로"
-              },
-              {
-                  image :'https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000501.png',
-                  amount : 32,
-                  sample_title: "청귤 시트러스 바이오셀룰로오스 모이스쳐 마스크",
-                  brand : "닥터펠로"
-              },
-              {
-                  image :'https://bangpanimage.s3.ap-northeast-2.amazonaws.com/product_image/new/nss0221.png',
-                  amount : 1,
-                  sample_title: "닥터펠로 허니 마스크팩",
-                  brand : "닥터펠로"
-              },
-              {
-                  image :'https://bangpanimage.s3.ap-northeast-2.amazonaws.com/product_image/new/nss0221.png',
-                  amount : 2,
-                  sample_title: "펠로스켈프토닉시트",
-                  brand : "닥터펠로"
-              },
-              {
-                  image :'https://bangpanimage.s3.ap-northeast-2.amazonaws.com/product_image/new/nss0221.png',
-                  amount : 56,
-                  sample_title: "조약 페블바 화이트",
-                  brand : "닥터펠로"
-              },
-          ]
+          powder,
+          sample1
       }
+  },
+  props: {
+      powder1 : Number,
+      btId : Number
   }
 }
 </script>

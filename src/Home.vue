@@ -18,7 +18,9 @@
                 margin-bottom : 5px;
                 ">
                 </a>
-                <CheckBox v-if="step === 1 || step === 3" />
+                <CheckBox v-if="step === 1 || step === 3" 
+                  @changeBtn="Cg"
+                />
                 <Btn v-if="step === 2" 
                     first="지난 체험단"
                     second="진행중"
@@ -41,6 +43,7 @@
           <ABody
             :step = "step"
             :page = "this.page"
+            :btId = "this.btId"
           />
         </div>
         <!-- center -->
@@ -92,18 +95,22 @@
 import ABody from "./components/PhonBody"
 import CheckBox from "./components/checkbox"
 import Btn from "./components/Btn_page2"
+import powder from "./powder"
 
 export default {
   name : "Home",
   components: {
     ABody,
     CheckBox,
-    Btn
+    Btn,
   },
   data(){
     return{
       step : 1,
       page : this.page,
+      btId : 999,
+      ex : true,
+      powder
     }
   },
   methods:{
@@ -115,6 +122,14 @@ export default {
     },
     Page(page){
       this.page = page;
+    },
+    Cg(n){
+      if (this.btId === this.powder[n].id - 1) {
+        this.btId = 999
+      }
+      else{
+        this.btId = n
+      }
     }
   },
 }

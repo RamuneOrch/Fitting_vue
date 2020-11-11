@@ -1,10 +1,10 @@
 <template>
-  <div class="" style="margin-bottom : 50px;">
+  <div class="p-2" style="margin-bottom : 50px;">
         <div v-if="page === 2">
-            <div
-            v-for="(person, index) in sample2"
+          <div
+            v-for="(person, index) in sample3"
             :key="index"
-            class="border-bottom col p-0"
+            class="border-bottom"
             >
                 <div
                     class="d-flex justify-content align-items-center bg-light "
@@ -19,7 +19,7 @@
                                     text-overflow: ellipsis;
                                 "
                             >
-                                <strong>{{ person.brand }}</strong>
+                                <strong>닥터펠로</strong>
                                 <a href="/buy">
                                     {{ person.sample_title }}
                                 </a>
@@ -39,7 +39,7 @@
                             </div>
                 </div>
             </div>
-        </div>
+      </div>
       <div v-if="page === 1">
           <div
             v-for="(person, index) in sample3"

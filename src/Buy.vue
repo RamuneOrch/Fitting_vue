@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid no-gutters p-0">
-      <div class="sticky-top text-left border-bottom p-3 no-gutters "
+      <div class="sticky-top text-left border-bottom p-2 no-gutters "
            style="background-color : white;
            color : black;
             "
@@ -19,12 +19,32 @@
           </a>
           
       </div>
+        <div>
+          <Hooper class="bg-light">
+            <Slide>
+              <div class="text-center">
+                <img src="https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sales_image/100601.png" alt="1" height="200px">
+              </div>
+            </Slide>
+            <Slide>
+              <div class="text-center">
+                <img src="https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sales_image/100611.png" alt="2" height="200px">
+              </div>
+            </Slide>
+            <hooper-navigation slot="hooper-addons"></hooper-navigation>
+        </Hooper>
+        </div>
+        
+          <div class="p-3" style="">
+              <div class="d-flex flex-column ml-0 mt-1">
+                  <strong class="mb-2">시아코스메틱</strong>
+                  <a href="/">유채 바이오셀룰로오스 모이스쳐 마스크</a>
+                  <p style="font-size : 18px; font-weight : bold">사용시밀착력이 좋은 향이 안나는 무향의 마스크팩</p>
+                  <p style="font-size : 14px;">g | 남은수량 개 | P</p>
+              </div>
+          </div>
 
-        <ABody
-            :step = "step"
-             class="text-dark"
-             style="padding : 10px;"
-        />
+
           <div class="pl-2 pr-2 pb-2" style="background-color : #f2f2f2">
               <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
                   <label class="btn btn-light border"
@@ -87,12 +107,16 @@
 </template>
 
 <script>
-import ABody from './components/PhonBody'
+// import ABody from './components/PhonBody'
+import { Hooper, Slide,Navigation as HooperNavigation } from 'hooper'
 
 export default {
   name: "Buy",
   components: {
-    ABody
+      // ABody,
+      Hooper,
+      Slide,
+      HooperNavigation
   },
   methods: {
     clickChange(n){
