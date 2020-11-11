@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2" style="margin-bottom : 50px;">
+  <div style="">
         <div v-if="page === 2">
           <div
             v-for="(person, index) in sample3"

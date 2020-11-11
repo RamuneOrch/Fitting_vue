@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Buy from '../Buy'
 import Home from '../Home'
+import Input from '../Input'
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,11 @@ const routes = [
     path: '/',
     name: 'home',
     component : Home
+  },
+  {
+    path: '/Input',
+    name: 'Input',
+    component : Input
   }
 ]
 

@@ -80,24 +80,25 @@
       </div>
 
 
-      <div class="fixed-bottom no-gutters p-0"
+      <div class="col fixed-bottom no-gutters p-0"
            style="
            "
       >
           <div class="text-center p-3">
             <div class="btn-group align-self-center " 
-               style="width : 400px;
+               style=";
                       border : 2px solid #5a3c82
                "
                role="group" aria-label="Basic example">
-              <button type="button" class="btn fs btn-light"
-                style=""
-              >
-                3000<br>
-              </button>
               <button type="button" class="btn btn-light"
+                @click="InputPage()"
               >
-                체험단 신청하기
+                <div class="d-inline p-3">
+                  3000
+                </div>
+                <div class="d-inline p-3">
+                  체험단 신청하기
+                </div>
               </button>
             </div>
           </div>
@@ -121,6 +122,9 @@ export default {
   methods: {
     clickChange(n){
       this.num = n
+    },
+    InputPage(){
+      window.open("./Input", "_self")
     }
   },
   data(){

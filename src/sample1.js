@@ -41,4 +41,67 @@ export default [
         brand : "닥터펠로",
         id: 3
     },
+    {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000181.png",
+        "amount": 19,
+        "brand": "유니크미",
+        "sample_title": "렌느 와일드 진생 브라이트닝 토너",
+        id: 4
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000411.png",
+        "amount": 60,
+        "brand": "콧데",
+        "sample_title": "자이모겐 발효콩 탄력 세럼",
+        id: 4
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000401.png",
+        "amount": 2,
+        "brand": "콧데",
+        "sample_title": "자이모겐 센텔라 발효 크림",
+        id: 5
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000391.png",
+        "amount": 44,
+        "brand": "콧데",
+        "sample_title": "자이모겐 어성초 발효 로션",
+        id: 5
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000381.png",
+        "amount": 63,
+        "brand": "콧데",
+        "sample_title": "자이모겐 어성초 발효 세럼",
+        id: 6
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000211.png",
+        "amount": 14,
+        "brand": "유니크미",
+        "sample_title": "베베깔량 바디워시&샴푸",
+        id: 6
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000201.png",
+        "amount": 23,
+        "brand": "유니크미",
+        "sample_title": "베베깔량 페이스&바디크림",
+        id: 6
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000081.png",
+        "amount": 70,
+        "brand": "(주)제주인디",
+        "sample_title": "폴리인디고 모이스트 젤 크림",
+        id: 6
+      },
+      {
+        "image": "https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sample_image/000321.png",
+        "amount": 180,
+        "brand": "네츄럴킵",
+        "sample_title": "킵 네추럴 헤어 샴푸 멈",
+        id: 7
+      }
 ]

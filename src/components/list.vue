@@ -12,7 +12,10 @@
                     "
                 
                 >
-                    <img :src="person.image" alt="" height="100px">
+                    <img :src="person.image" alt="" height="100px"
+                        style="cursor : pointer" class="mr-3"
+                        @click="pageChange"
+                    >
                     <div 
                         class="
                             p-3 d-flex flex-column bg-light
@@ -20,8 +23,10 @@
                         "
                         style="border-radius : 10px;
                                text-overflow: ellipsis;
-                            width:100%;
+                                width:100%;
+                                cursor : pointer;
                         "
+                        @click="pageChange"
                     >
                         <strong>{{ person.brand }}</strong>
                         <a href="/buy" style="
@@ -57,6 +62,9 @@ export default {
   methods: {
       test(){
         //   console.log(this.btId);
+      },
+      pageChange(){
+          window.open("./Buy","_self")
       }
   },
   data() {
