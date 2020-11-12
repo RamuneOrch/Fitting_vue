@@ -124,7 +124,7 @@ export default {
       this.num = n
     },
     InputPage(){
-      window.open("./Input", "_self")
+      window.open("./input", "_self")
     }
   },
   data(){
