@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid no-gutters p-0">
       <div class="sticky-top text-left border-bottom p-2 bg-light">
-          <a href="/buy" style=" text-decoration : none; vertical-align : -2px;">
+          <a href="./Buy" style=" text-decoration : none; vertical-align : -2px;">
             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill m-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
             style=""
           >
