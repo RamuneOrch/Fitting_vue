@@ -5,7 +5,7 @@
            color : black;
             "
       >
-          <a href="/" style=" text-decoration : none; vertical-align : -2px;">
+          <a href="./" style=" text-decoration : none; vertical-align : -2px;">
             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill m-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
             style=""
           >
@@ -38,7 +38,7 @@
           <div class="p-3" style="">
               <div class="d-flex flex-column ml-0 mt-1">
                   <strong class="mb-2">시아코스메틱</strong>
-                  <a href="/">유채 바이오셀룰로오스 모이스쳐 마스크</a>
+                  <p>유채 바이오셀룰로오스 모이스쳐 마스크</p>
                   <p style="font-size : 18px; font-weight : bold">사용시밀착력이 좋은 향이 안나는 무향의 마스크팩</p>
                   <p style="font-size : 14px;">g | 남은수량 개 | P</p>
               </div>

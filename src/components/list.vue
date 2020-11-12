@@ -29,7 +29,7 @@
                         @click="pageChange"
                     >
                         <strong>{{ person.brand }}</strong>
-                        <a href="/buy" style="
+                        <a href="./Buy" style="
                             white-space:normal;">
                             {{ person.sample_title }}
                         </a>

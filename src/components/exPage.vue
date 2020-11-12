@@ -20,7 +20,7 @@
                                 "
                             >
                                 <strong>닥터펠로</strong>
-                                <a href="/buy">
+                                <a href="./Buy">
                                     {{ person.sample_title }}
                                 </a>
                                 <p class="card-text mb-auto"
