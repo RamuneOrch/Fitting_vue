@@ -14,7 +14,7 @@
                 >
                     <img :src="person.image" alt="" height="100px"
                         style="cursor : pointer" class="mr-3"
-                        @click="pageChange"
+                        @click="pageChange(index)"
                     >
                     <div 
                         class="
@@ -26,13 +26,14 @@
                                 width:100%;
                                 cursor : pointer;
                         "
-                        @click="pageChange"
+                        @click="pageChange(index)"
                     >
-                        <strong>{{ person.brand }}</strong>
-                        <a href="./Buy" style="
+                        <p>{{ person.brand }}</p>
+                        <strong style="
+                            font-size : 20px;
                             white-space:normal;">
                             {{ person.sample_title }}
-                        </a>
+                        </strong>
                         <p class="card-text mb-auto"
                             style="
                             overflow:hidden;
@@ -40,7 +41,7 @@
                             text-overflow: ellipsis;
                             font-size: 14px"
                         >
-                            사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
+                            {{ person.information }}
                         </p>
                         <div class="align-text-bottom text-muted">
                             g | {{ person.amount }}개| P
@@ -63,19 +64,20 @@ export default {
       test(){
         //   console.log(this.btId);
       },
-      pageChange(){
-          window.open("./Buy","_self")
+      pageChange(n){
+          window.open(`./Buy?id=${n}`,"_self")
+        // console.log(n);
       }
   },
   data() {
       return {
           powder,
-          sample1
+          sample1,
       }
   },
   props: {
       powder1 : Number,
-      btId : Number
+      btId : Number,
   }
 }
 </script>

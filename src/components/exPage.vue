@@ -60,9 +60,9 @@
                                 "
                             >
                                 <strong>종료</strong>
-                                <a href="/buy">
+                                <p>
                                     종료~~
-                                </a>
+                                </p>
                                 <p class="card-text mb-auto"
                                     style="
                                     overflow:hidden;
@@ -100,9 +100,9 @@
                                 "
                             >
                                 <strong>예정</strong>
-                                <a href="/buy">
+                                <p>
                                     예정중입니다
-                                </a>
+                                </p>
                                 <p class="card-text mb-auto"
                                     style="
                                     overflow:hidden;

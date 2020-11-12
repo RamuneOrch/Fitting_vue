@@ -10,7 +10,10 @@ const routes = [
   {
     path: '/Buy',
     name: 'Buy',
-    component : Buy
+    component : Buy,
+    props:(route) => ({
+      query: route.query.id
+    })
   },
   {
     path: '/',
@@ -20,14 +23,15 @@ const routes = [
   {
     path: '/Input',
     name: 'Input',
-    component : Input
+    component : Input,
+    props:(route) => ({
+      query: route.query.id
+    })
   }
 ]
 
-const router = new VueRouter({
+export default new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
-
-export default router

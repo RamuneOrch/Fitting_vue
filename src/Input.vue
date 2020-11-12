@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid no-gutters p-0">
       <div class="sticky-top text-left border-bottom p-2 bg-light">
-          <a href="./Buy" style=" text-decoration : none; vertical-align : -2px;">
+          <a :href="link" style=" text-decoration : none; vertical-align : -2px;">
             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill m-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
             style=""
           >
@@ -21,7 +21,7 @@
           <div class="d-flex justify-content align-items-center p-3 pr-4 pl-4"
                 
         >
-            <img :src="powder[1].image" alt="" height="100px">
+            <img :src="powder[this.bengi].image" alt="" height="100px">
             <div 
                 class="
                     p-3 d-flex flex-column bg-light
@@ -32,7 +32,7 @@
                     width:100%;
                 "
             >
-                <p style="font-size : 14px; color : purple">{{ powder[1].brand }}</p>
+                <p style="font-size : 14px; color : purple">{{ powder[this.bengi].brand }}</p>
                 <p style="
                         white-space:normal;
                         font-weight : bold;
@@ -40,7 +40,7 @@
                     "
                     class=""
                     >
-                    {{ powder[1].sample_title }}
+                    {{ powder[this.bengi].sample_title }}
                 </p>
                 <p class="card-text mb-auto"
                     style="
@@ -52,7 +52,7 @@
                     사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
                 </p>
                 <div class="align-text-bottom text-muted">
-                    300ml / 150ml | {{ powder[1].amount }}개 | 39,000원
+                    300ml / 150ml | {{ powder[this.bengi].amount }}개 | 39,000원
                 </div>
                 <!-- <button @click="test">테스트</button> -->
             </div>
@@ -175,13 +175,18 @@ import powder from "./sample1.js"
 export default {
     data(){
         return{
-            powder
+            powder,
+            bengi : Number(this.query),
+            link : `./Buy?id=${this.query}`
         }
     },
     methods : {
         test(){
             // console.log(powder[1].amount);
         }
+    },
+    props:{
+        query : String
     }
 }
 </script>

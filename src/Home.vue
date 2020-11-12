@@ -150,6 +150,7 @@ export default {
       if(this.step !== n){
         this.step = n
         this.page = 2
+        this.btId = 999
       }
     },
     Page(page){

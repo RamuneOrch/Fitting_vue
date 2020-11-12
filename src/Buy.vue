@@ -23,12 +23,12 @@
           <Hooper class="bg-light">
             <Slide>
               <div class="text-center">
-                <img src="https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sales_image/100601.png" alt="1" height="200px">
+                <img :src="sample[this.faker].image" alt="1" height="200px">
               </div>
             </Slide>
             <Slide>
               <div class="text-center">
-                <img src="https://bangpanimage.s3.ap-northeast-2.amazonaws.com/sales_image/100611.png" alt="2" height="200px">
+                <img :src="sample[this.faker].image" alt="2" height="200px">
               </div>
             </Slide>
             <hooper-navigation slot="hooper-addons"></hooper-navigation>
@@ -37,9 +37,13 @@
         
           <div class="p-3" style="">
               <div class="d-flex flex-column ml-0 mt-1">
-                  <strong class="mb-2">시아코스메틱</strong>
-                  <p>유채 바이오셀룰로오스 모이스쳐 마스크</p>
-                  <p style="font-size : 18px; font-weight : bold">사용시밀착력이 좋은 향이 안나는 무향의 마스크팩</p>
+                  <strong class="mb-2">
+                    {{ sample[this.faker].brand }}
+                  </strong>
+                  <p>{{ sample[this.faker].sample_title }}</p>
+                  <p style="font-size : 18px; font-weight : bold">
+                    {{ sample[this.faker].information }}
+                  </p>
                   <p style="font-size : 14px;">g | 남은수량 개 | P</p>
               </div>
           </div>
@@ -61,7 +65,7 @@
           </div>
 
       <div class="p-3" style="" v-if="num === 1">
-        <div v-for="(people, index) in sample" :key="index">
+        <div v-for="(people, index) in sample1" :key="index">
           <img :src="people.image" alt="1" 
           style="
             width:100%;
@@ -103,35 +107,41 @@
             </div>
           </div>
       </div>
-
   </div>
 </template>
 
 <script>
 // import ABody from './components/PhonBody'
 import { Hooper, Slide,Navigation as HooperNavigation } from 'hooper'
+import sample from "./sample1"
 
 export default {
+  props:{
+    query : String
+  },
   name: "Buy",
   components: {
       // ABody,
-      Hooper,
-      Slide,
-      HooperNavigation
+    Hooper,
+    Slide,
+    HooperNavigation,
   },
   methods: {
-    clickChange(n){
-      this.num = n
-    },
-    InputPage(){
-      window.open("./input", "_self")
-    }
+		clickChange(n){
+			this.num = n
+		},
+		InputPage(){
+      window.open(`./input?id=${this.faker}`, "_self")
+      // console.log(this.query);
+		}
   },
   data(){
     return{
+      faker : Number(this.query),
       num : 1,
+      sample,
       step:4,
-      sample:[
+      sample1:[
         {
           image : 'https://bangpanimage.s3.ap-northeast-2.amazonaws.com/experience/ede.png'
         },
