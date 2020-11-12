@@ -80,14 +80,6 @@ export default {
 }
 </script>
 
-<style>
-.cur_sor{
-    cursor: pointer;
-}
-.filtered_box {
-    max-width: 800px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow:hidden;
-}
+<style lang="stylesheet">
+
 </style>

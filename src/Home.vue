@@ -59,7 +59,7 @@
         >
           <div class="container"
           >
-            <div class="row align-items-center pr-3 pb-4 pl-3">
+            <div class="row align-items-center pr-3 pl-3">
               <div class="col text-center footer_btn">
                 <button 
                   class="btn"

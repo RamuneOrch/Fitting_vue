@@ -39,8 +39,9 @@ export default {
 }
 </script>
 
-<style>
-    .btns{
-        font-size : 10px;
+<style src="../style/main.css">
+    button:active, button:focus{
+        outline: none;
+        box-shadow: none;
     }
 </style>
