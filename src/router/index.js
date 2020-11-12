@@ -8,11 +8,9 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/buy',
-    name: 'buy',
-    component : Buy,
-    props: {
-    }
+    path: '/Buy',
+    name: 'Buy',
+    component : Buy
   },
   {
     path: '/',
