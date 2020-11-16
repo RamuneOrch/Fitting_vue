@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="pb-0 pr-2 pl-2">
         <button 
             class="btn btn-light btn-outline-dark rounded-pill mr-2 mb-3 btn-sm" 
             v-for="(people, index) in powder"

@@ -75,7 +75,7 @@
                     <path fill-rule="evenodd" d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3z"/>
                     <path d="M15 7v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z"/>
                   </svg>
-                  <p class="pt-1">샘플 체험</p>
+                  <p class="pt-1"></p>
                 </button>
               </div>
               <div class="col text-center footer_btn">
@@ -92,7 +92,7 @@
                   <svg v-if="this.step === 2" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-archive-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/>
                   </svg>
-                  <p class="pt-1">본품 체험</p>
+                  <p class="pt-1"></p>
                 </button>
               </div>
               <div class="col text-center footer_btn">
@@ -110,7 +110,7 @@
                     <path fill-rule="evenodd" d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm.354-7.646a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
                   </svg>
 
-                  <p class="pt-1">구매</p>
+                  <p class="pt-1"></p>
                 </button>
               </div>
             </div>
@@ -128,6 +128,7 @@ import ABody from "./components/PhonBody"
 import CheckBox from "./components/checkbox"
 import Btn from "./components/Btn_page2"
 import powder from "./powder"
+import gql from "graphql-tag"
 
 export default {
   name : "Home",
@@ -142,7 +143,8 @@ export default {
       page : this.page,
       btId : 999,
       ex : true,
-      powder
+      powder,
+      sample : ''
     }
   },
   methods:{
@@ -165,6 +167,11 @@ export default {
       }
     }
   },
+  apollo: {
+    sample: gql`{
+      all_sample_product
+    }`
+  }
 }
 </script>
 

@@ -4,7 +4,7 @@
                 v-for="(person, index) in sample1"
                 :key="index"
             >
-                <div class="d-flex justify-content align-items-center p-3 pr-4 pl-4 border-bottom
+                <div class="m-2 d-flex justify-content align-items-center border-bottom rounded shadow-sm
                     "
                     v-if="person.id === btId || btId === 999"
                     style="
@@ -12,38 +12,40 @@
                     "
                 
                 >
-                    <img :src="person.image" alt="" height="100px"
-                        style="cursor : pointer" class="mr-3"
+                    <img :src="person.image" alt="" height="110px"
+                        style="cursor : pointer" class=""
                         @click="pageChange(index)"
                     >
                     <div 
                         class="
-                            p-3 d-flex flex-column bg-light
-                            filtered_box    
+                            p-2 d-flex flex-column
+                            filtered_box
                         "
-                        style="border-radius : 10px;
-                               text-overflow: ellipsis;
-                                width:100%;
-                                cursor : pointer;
+                        style="
+                            min-width : 100px;
+                            cursor : pointer;
                         "
                         @click="pageChange(index)"
                     >
-                        <p>{{ person.brand }}</p>
-                        <strong style="
-                            font-size : 20px;
-                            white-space:normal;">
-                            {{ person.sample_title }}
-                        </strong>
-                        <p class="card-text mb-auto"
+                        <p style="font-size : 12px; margin : 0 0 4px; font-weight : bold;
+                            
+                        ">{{ person.brand }}</p>
+                        <h3
+                            class=" mb-0"
                             style="
-                            overflow:hidden;
-                            white-space:normal;
-                            text-overflow: ellipsis;
-                            font-size: 14px"
+                                font-size : 1.2rem;
+                                color : black;
+                                font-weight : 700;
+                            ">
+                            {{ person.sample_title }}
+                        </h3>
+                        <span class="card-text"
+                            style="
+                                font-size: 12px"
                         >
                             {{ person.information }}
-                        </p>
-                        <div class="align-text-bottom text-muted">
+                        </span>
+                        <div class="align-text-bottom text-muted" style="font-size : 12px">
                             g | {{ person.amount }}개| P
                         </div>
                         <!-- <button @click="test">테스트</button> -->

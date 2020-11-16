@@ -44,7 +44,7 @@ import store from './store'
 
 
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 // const apolloProvider = new VueApollo({
 //   // Apollo 2.0 allows multiple clients to be enabled at once.

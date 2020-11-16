@@ -1,0 +1,5 @@
+query all_sample_product{
+    all_sample_product{
+        amount
+    }
+}
