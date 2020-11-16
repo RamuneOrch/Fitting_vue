@@ -1,17 +1,22 @@
 <template>
-  <div class="row justify-content-center"
-       style="background-color : #f2f2f2"
+  <div class=""
+       style="background-color : #f2f2f2;
+       "
   >
     <div class="">
       <div v-if="step === 1"
       >
         <List
           :btId = "this.btId"
+          style=""
         />
       </div>
       <div v-if="step === 2">
         <exPage
           :page="page"
+          style="max-width : 800px;
+                 margin:auto;
+            "
         />
       </div>
       <div v-if="step === 3">

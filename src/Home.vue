@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <div class="container-fluid no-gutters p-0"
+      <div class=""
            style="
           background-color : #f2f2f2;"
       >

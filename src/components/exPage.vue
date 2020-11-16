@@ -2,34 +2,31 @@
   <div style="">
         <div v-if="page === 2">
           <div
-            v-for="(person, index) in sample3"
+            v-for="(person, index) in sample2"
             :key="index"
             class="border-bottom"
             >
                 <div
-                    class="d-flex justify-content align-items-center bg-light "
+                    class="d-flex justify-content align-items-center bg-white pr-2 pl-2"
                 >
-                    <img :src="person.image" alt="" height="120px" class="ml-3">
+                    <div class="position-relative bg-black"
+                    >
+                        <img :src="person.image" alt="" height="120px" class="">
+                    </div>
                     <div 
                                 class="
-                                    p-4 d-flex flex-column bg-light
+                                    p-2 d-flex flex-column
                                     filtered_box ml-2  
                                 "
                                 style="border-radius : 10px;
-                                    text-overflow: ellipsis;
+                                        font-size : 12px;
                                 "
                             >
-                                <strong>닥터펠로</strong>
-                                <a href="./Buy">
-                                    {{ person.sample_title }}
-                                </a>
-                                <p class="card-text mb-auto"
-                                    style="
-                                    overflow:hidden;
-                                    white-space:normal;
-                                    text-overflow: ellipsis;"
-                                >
-                                    사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
+                                <p style="font-size : 10px;">진행중</p>
+                                <p style="font-size : 15px; margin : 0 0 4px; font-weight : bold;
+                            
+                        ">
+                                    {{ person.brand }}
                                 </p>
                                 <p>체험 용량 : </p>
                                 <p>모집 체험단 : </p>
@@ -47,29 +44,49 @@
             class="border-bottom"
             >
                 <div
-                    class="d-flex justify-content align-items-center bg-light "
+                    class="d-flex justify-content align-items-center bg-white pr-2 pl-2 "
                 >
-                    <img :src="person.image" alt="" height="120px" class="ml-3">
+                    <div class="position-relative bg-black"
+                    >
+                        <img :src="person.image" alt="" height="120px" class="">
+                        <div style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color : rgba(0, 0, 0, 0.7);
+                            width : 120px;
+                            height : 120px;
+                            border-radius : 10px;
+                        "
+                            class=""
+                        >
+                            <div style="
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color : white;
+                            ">
+                                종료된 <br>
+                                체험단  
+                            </div>
+                        </div>
+                    </div>
                     <div 
                                 class="
-                                    p-4 d-flex flex-column bg-light
+                                    p-2 d-flex flex-column
                                     filtered_box ml-2  
                                 "
                                 style="border-radius : 10px;
-                                    text-overflow: ellipsis;
+                                        font-size : 12px;
                                 "
                             >
-                                <strong>종료</strong>
-                                <p>
-                                    종료~~
-                                </p>
-                                <p class="card-text mb-auto"
-                                    style="
-                                    overflow:hidden;
-                                    white-space:normal;
-                                    text-overflow: ellipsis;"
-                                >
-                                    사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
+                                <p style="font-size : 10px;">종료</p>
+                                <p style="font-size : 15px; margin : 0 0 4px; font-weight : bold;
+                            
+                        ">
+                                    브랜드 명
                                 </p>
                                 <p>체험 용량 : </p>
                                 <p>모집 체험단 : </p>
@@ -87,29 +104,23 @@
             class="border-bottom"
             >
                 <div
-                    class="d-flex justify-content align-items-center bg-light "
+                    class="d-flex justify-content align-items-center bg-white  pr-2 pl-2"
                 >
-                    <img :src="person.image" alt="" height="120px" class="ml-3">
+                    <img :src="person.image" alt="" height="120px" class="">
                     <div 
                                 class="
-                                    p-4 d-flex flex-column bg-light
+                                    p-2 d-flex flex-column
                                     filtered_box ml-2  
                                 "
                                 style="border-radius : 10px;
-                                    text-overflow: ellipsis;
+                                        font-size : 12px;
                                 "
                             >
-                                <strong>예정</strong>
-                                <p>
-                                    예정중입니다
-                                </p>
-                                <p class="card-text mb-auto"
-                                    style="
-                                    overflow:hidden;
-                                    white-space:normal;
-                                    text-overflow: ellipsis;"
-                                >
-                                    사용시 밀착력이 좋은 향이 안나는 무향의 마스크 팩
+                                <p style="font-size : 10px;">예정</p>
+                                <p style="font-size : 15px; margin : 0 0 4px; font-weight : bold;
+                            
+                        ">
+                                    체험예정
                                 </p>
                                 <p>체험 용량 : </p>
                                 <p>모집 체험단 : </p>
